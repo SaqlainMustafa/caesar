@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+}
+
+.call-container {
+    background-image: url(../images/Patterns.png);
+    background-color: $blue;
+    width: 156px;
+    height: 277px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    padding: 45px 25px 39px 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .circle {
+        top: 45px;
+        width: 66px;
+        height: 66px;
+        background-color: $darkblack;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+    
+    .call-text {
+        color: $white;
+        text-align: center;
+    
+        .call-heading {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 6px 0 6px 0;
+        }
+    
+        .call-para {
+            font-size: 12px;
+            font-weight: 400;
+    
+            .i-icon {
+                width: 10px;
+                height: 10px;
+                margin-left: 8px;
+            }
+        }
+    }
+    
+    .call-meeting {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+    
+        .phone-logo {
+            width: 35px;
+            height: 37px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+.call-list-container {
+    background-image: url(../images/Patterns.png);
+    background-color: $blue;
+    width: 156px;
+    height: 277px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 12px 12px 11px;
+
+    .incoming-tab {
+        background-color: $white;
+        width: 73px;
+        height: 21px;
+        border-radius: 15px 15px 0 0;
+        margin: 0 auto;
+        // margin: 10px 40px 0 43px;
+
+        .incomig-heading {
+            font-size: 8px;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 7px;
+        }
+    }
+
+    .call-list {
+        background-color: $white;
+        width: 133px;
+        height: 234px;
+        border-radius: 15px;
+        margin: 0 auto;
+        padding: 13px 9px 42px 9px;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+        }
+
+        .call-list-circle {
+            background-color: $primary;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .call-list-detail {
+            display: flex;
+
+            .call-list-contats {
+                margin-left: 8px;
+
+                .contact-heading {
+                    font-size: 7px;
+                    font-weight: 500;
+                    color: $darkblack;
+                    line-height: 11px;
+                    text-align: center;
+                }
+        
+                .contact-para {
+                    font-size: 6px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .call-list-dott {
+        
+        .call-dott-img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
