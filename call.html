@@ -9,29 +9,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="incoming-container" id="hide-incoming">
-        <div class="call-container">
-            <div class="circle"></div>
+    <div class="contact-container">
+        <div class="calling-container">
+            <div class="circle">
+                <div class="verticle-line"></div>
+            </div>
             <div class="call-text">
-                <h4 class="call-heading">Ubaid Asim+2</h4>
-                <p class="call-para">Incoming <img class="i-icon" src="./assets/images/i-circle.png"></p>
+                <h4 class="call-heading">Ubaid Asim</h4>
+                <p class="call-para">00:00:12</p>
             </div>
             <div class="call-meeting">
-                <div class="call-cut phone-logo">
-                    <img class="phone-img" src="./assets/images/call-down.png">
+                <div class="call-1 phone-logo">
+                    <img class="phone-img" src="./assets/images/Vector-1.png">
                 </div>
-                <a href="./calling.html"><div class="call-attend phone-logo">
-                    <img class="phone-img" src="./assets/images/call-up.png">
-                </div></a>
+                <div class="call-1 phone-logo">
+                    <img class="phone-img" src="./assets/images/vector-2.png">
+                </div>
+                <div class="call-3 phone-logo">
+                    <img class="phone-img" src="./assets/images/vector-3.png">
+                </div>
+            </div>
+
+            <div class="call-meeting-2">
+                <div class="call-1 phone-logo">
+                    <img class="phone-img" src="./assets/images/Vector-4.png">
+                </div>
+                <div class="call-5 phone-logo">
+                    <img class="phone-img" src="./assets/images/vector-5.png">
+                </div>
+                <div class="call-6 phone-logo" onclick="myPhone()">
+                    <img class="phone-img" src="./assets/images/vector-6.png">
+                </div>
+            </div>
+
+            <div class="bottom-phone">
+                <img src="./assets/images/call-down.png">
             </div>
         </div>
 
         <div class="call-list-container">
-            <div class="incoming-tab">
-                <h4 class="incomig-heading">Incoming</h4>
+            <div class="tabs-container">
+                <div class="recent-tab">
+                    <h4 class="recent-heading">Recent</h4>
+                </div>
+                <div class="contact-tab">
+                    <h4 class="contact-main-heading">Contact</h4>
+                </div>
             </div>
-            <div class="call-list">
-
+            <div class="call-list-1">
                 <div>
                     <div class="call-list-detail">
                         <div class="call-list-circle"></div>
@@ -138,14 +163,67 @@
                 </div>
                 
             </div>
+
+            <div class="phone-pad" id="my-phone">
+                <div class="phone-text">
+                    <input type="text" class="phone-call-text">
+                    <img class="input-arrow" src="./assets/images/input-arrow.png">
+                </div>
+                <div class="phone-tablet">
+                    <div class="phone-meeting-1">
+                        <div class="phone-1 phone-numbers">
+                            <p class="phone-number-text">1</p>
+                        </div>
+                        <div class="phone-2 phone-numbers">
+                            <p class="phone-number-text">2</p>
+                        </div>
+                        <div class="phone-3 phone-numbers">
+                            <p class="phone-number-text">3</p>
+                        </div>
+                    </div>
+
+                    <div class="phone-meeting-2">
+                        <div class="phone-1 phone-numbers">
+                            <p class="phone-number-text">4</p>
+                        </div>
+                        <div class="phone-2 phone-numbers">
+                            <p class="phone-number-text">5</p>
+                        </div>
+                        <div class="phone-3 phone-numbers">
+                            <p class="phone-number-text">6</p>
+                        </div>
+                    </div>
+
+                    <div class="phone-meeting-3">
+                        <div class="phone-1 phone-numbers">
+                            <p class="phone-number-text">7</p>
+                        </div>
+                        <div class="phone-2 phone-numbers">
+                            <p class="phone-number-text">8</p>
+                        </div>
+                        <div class="phone-3 phone-numbers">
+                            <p class="phone-number-text">9</p>
+                        </div>
+                    </div>
+
+                    <div class="phone-meeting-4">
+                        <div class="phone-1 phone-star">
+                            <p>*</p>
+                        </div>
+                        <div class="phone-2 phone-numbers">
+                            <p class="phone-number-text">0</p>
+                        </div>
+                        <div class="phone-3 phone-numbers">
+                            <p class="phone-number-text">#</p>
+                        </div>
+                    </div>
+                    <div class="call-attend phone-logo">
+                        <img class="phone-img" src="./assets/images/call-up.png">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="bottom-phone-1" onclick="bottomPhone()">
-        <img src="./assets/images/bottom-phone-icon.png">
-    </div>
-
-    
 
     <script src="./assets/js/main.js"></script>
 </body>

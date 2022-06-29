@@ -1,6 +1,15 @@
 @import  "variables";
 @import "incoming";
 @import "calling";
+@import "contact";
+@import "transfer";
+@import "muted";
+@import "call";
+@import "receiving";
+@import "callstatus";
+@import "recent";
+@import "callpad";
+@import "coming";
 
 
 
@@ -21,4 +30,17 @@
 
 body {
     overflow-x: hidden;
+}
+
+.phone-number-text {
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.callpad-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
 }

@@ -1,0 +1,120 @@
+.contact-container {
+    display: flex;
+
+    .tabs-container {
+        display: flex;
+
+        .recent-tab {
+            background-color: $white;
+            border-radius: 15px 15px 0 0;
+            width: 73px;
+            height: 21px;
+
+            .recent-heading {
+                font-size: 8px;
+                font-weight: 600;
+                text-align: center;
+                padding-top: 7px;
+            }
+        }
+
+        .contact-tab {
+            width: 73px;
+            height: 21px;
+
+            .contact-main-heading {
+                font-size: 8px;
+                font-weight: 600;
+                text-align: center;
+                padding-top: 7px;
+                color: $white;
+            }
+        }
+    }
+
+    .call-list-1 {
+        background-color: $white;
+        width: 133px;
+        height: 234px;
+        border-radius: 0 15px 15px 15px;
+        margin: 0 auto;
+        padding: 10px 9px 0 9px;
+
+        .search-bar {
+                
+            .search {
+                width: 100%;
+                background: rgba(43, 54, 142, 0.24);
+                border-radius: 30px;
+                border: none;
+                outline: none;
+                font-size: 8px;
+                font-weight: 500;
+                padding: 4px 0 4px 13px;
+            }
+
+            ::placeholder {
+                color: $grey;
+            }
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+
+            
+        }
+
+        .call-list-circle {
+            background-color: $primary;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        
+
+        .call-list-detail {
+            display: flex;
+
+            .call-list-contats {
+                margin-left: 8px;
+
+                .contact-heading {
+                    font-size: 7px;
+                    font-weight: 500;
+                    color: $darkblack;
+                    line-height: 11px;
+                    text-align: end;
+                }
+        
+                .contact-para {
+                    font-size: 6px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .call-direction {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $blue;
+            border: 1px solid $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 13px auto;   
+        }
+    }
+
+    .call-list-dott {
+        
+        .call-dott-img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+}

@@ -1,0 +1,287 @@
+.receive-container {
+    display: flex;
+}
+
+.receive-call-container {
+    background-image: url(../images/receive-bg.png);
+    background-color: $bluepalettes;
+    width: 156px;
+    height: 277px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    padding: 45px 25px 39px 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .receive-circle {
+        margin-top: 45px;
+        width: 66px;
+        height: 66px;
+        background-color: $white;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .receive-call-text {
+        color: $white;
+        text-align: center;
+    
+        .receive-call-heading {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 14px;
+            line-height: 21px;
+        }
+    
+        .receive-call-para {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+    
+            .i-icon {
+                width: 10px;
+                height: 10px;
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .receive-call-meeting {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 47px;
+    
+        .receive-phone-logo {
+            width: 35px;
+            height: 35px;
+            background-color: $white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+.receive-call-list-container {
+    position: relative;
+    background-color: $white;
+    width: 156px;
+    height: 277px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .recent-tabs-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .receive-recent-tab {
+
+        .receive-recent-heading {
+            position: relative;
+            font-size: 6px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 10px;
+            color: $bluepalettes;
+        }
+
+        .receive-recent-heading::after {
+            position: absolute;
+            content: '';
+            width: 33px;
+            height: 2px;
+            top: 18px;
+            left: -6px;
+            background-color: $bluepalettes;
+        }
+    }
+
+    .receive-contact-tab {
+        margin-left: 10px;
+        .receive-contact-heading {
+            position: relative;
+            font-size: 6px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 10px;
+            color: $secondary;
+        }
+    }
+
+    .receive-call-list {
+        background-color: $white;
+        border-radius: 15px;
+        margin: 0 auto;
+        padding: 10px 18px 0 18px;
+
+        .recent-search-bar {
+                margin-bottom: 8px;
+                .recent-search {
+                    width: 100%;
+                    border-radius: 30px;
+                    border: none;
+                    outline: none;
+                    background-color: $aliceblue;
+                    font-size: 8px;
+                    font-weight: 500;
+                    padding: 4px 0 4px 15px;
+                }
+                ::placeholder {
+                    color: $grey;
+                }
+            }
+
+        .receive-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+        }
+
+        .receive-list-circle {
+            background-color: $primary;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .receive-list-detail {
+            display: flex;
+
+
+            .receive-list-contats {
+                margin-left: 9px;
+
+                .receive-contact-heading {
+                    font-size: 7px;
+                    font-weight: 500;
+                    color: $darkblack;
+                    line-height: 11px;
+                    text-align: center;
+                }
+
+                .receive-contact-para {
+                    font-size: 6px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .call-list-dott {
+        
+        .call-dott-img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    .receive-bottom-input {
+        position: absolute;
+        bottom: 0;
+        .receive-input {
+            width: 100%;
+            padding: 6px;
+            border-radius: 30px;
+            background-color: $aliceblue;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .conference-call {
+        position: absolute;   
+        width: 32px;
+        height: 32px;
+        background-color: $bluepalettes;
+        display: grid;
+        place-items: center;
+        opacity: 1;
+        border-radius: 50%;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+}
+
+.call-pad {
+    background-image: url(../images/left-bottom-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 156px;
+    // height: 197px;
+    background-color: $bluepalettes;
+    border-radius: 15px;
+    padding: 7px 14px 7px 14px;
+
+    .call-pad-text {
+        position: relative;
+        
+        .call-pad-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            padding: 4px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 500;
+            background-color: $aliceblue;
+            color: $grey;
+        }
+
+        .callpad-input-arrow {
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            cursor: pointer;
+        }
+    }
+
+    .callpad-tablet {
+        margin-top: 10px;
+
+        .callpad-meeting-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            .callpad-numbers {
+                width: 25px;
+                height: 25px;
+                background-color: $white;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                color: $bluepalettes;
+                line-height: 16px;
+
+            }
+
+            .callpad-star {
+                
+                .callpad-star-text {
+                    font-size: 16px;
+                    line-height: 34px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .callpad-attend {
+            width: 35px;
+            height: 35px;
+            background-color: $aliceblue;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin: 0 auto;
+        }
+    }
+}

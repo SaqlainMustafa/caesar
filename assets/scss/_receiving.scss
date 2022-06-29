@@ -1,11 +1,10 @@
-.incoming-container {
+.receive-container {
     display: flex;
-    display: none;
 }
 
-.call-container {
-    background-image: url(../images/Patterns.png);
-    background-color: $blue;
+.receive-call-container {
+    background-image: url(../images/receive-bg.png);
+    background-color: $bluepalettes;
     width: 156px;
     height: 277px;
     border-radius: 15px;
@@ -13,46 +12,49 @@
     padding: 45px 25px 39px 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    .circle {
-        top: 45px;
+    .receive-circle {
+        margin-top: 45px;
         width: 66px;
         height: 66px;
-        background-color: $darkblack;
+        background-color: $white;
         margin: 0 auto;
         border-radius: 50%;
     }
-    
-    .call-text {
+
+    .receive-call-text {
         color: $white;
         text-align: center;
     
-        .call-heading {
+        .receive-call-heading {
             font-size: 14px;
             font-weight: 500;
-            margin: 6px 0 6px 0;
+            margin-top: 14px;
+            line-height: 21px;
         }
     
-        .call-para {
+        .receive-call-para {
             font-size: 12px;
             font-weight: 400;
+            line-height: 18px;
     
             .i-icon {
                 width: 10px;
                 height: 10px;
-                margin-left: 8px;
+                margin-left: 3px;
             }
         }
     }
-    
-    .call-meeting {
+
+    .receive-call-meeting {
         display: flex;
         justify-content: space-between;
-        margin-top: 44px;
+        margin-top: 47px;
     
-        .phone-logo {
+        .receive-phone-logo {
             width: 35px;
             height: 35px;
-            border: 1px solid $white;
+            // border: 1px solid $white;
+            background-color: $white;
             border-radius: 50%;
             display: grid;
             place-items: center;
@@ -60,67 +62,77 @@
     }
 }
 
-.call-list-container {
-    background-image: url(../images/Patterns.png);
-    background-color: $blue;
+.receive-call-list-container {
+    position: relative;
+    background-color: $white;
     width: 156px;
     height: 277px;
     border-radius: 15px;
-    background-repeat: no-repeat;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 8px 12px 12px 11px;
+    
 
-    .incoming-tab {
+    .receive-incoming-tab {
         background-color: $white;
         width: 73px;
         height: 21px;
         border-radius: 15px 15px 0 0;
         margin: 0 auto;
 
-        .incomig-heading {
-            font-size: 8px;
-            font-weight: 600;
+        .receive-incomig-heading {
+            position: relative;
+            font-size: 6px;
+            font-weight: 500;
             text-align: center;
-            padding-top: 7px;
+            padding-top: 10px;
+            color: $bluepalettes;
+        }
+
+        .receive-incomig-heading::after {
+            position: absolute;
+            content: '';
+            width: 33px;
+            height: 2px;
+            top: 18px;
+            left: 19px;
+            background-color: $bluepalettes;
         }
     }
 
-    .call-list {
+    .receive-call-list {
         background-color: $white;
-        width: 133px;
-        height: 234px;
         border-radius: 15px;
         margin: 0 auto;
-        padding: 13px 9px 42px 9px;
+        padding: 10px 18px 0 18px;
 
-        > div {
+        .receive-flex {
             display: flex;
             justify-content: space-between;
             margin-bottom: 7px;
         }
 
-        .call-list-circle {
+        .receive-list-circle {
             background-color: $primary;
             width: 20px;
             height: 20px;
             border-radius: 50%;
         }
 
-        .call-list-detail {
+        .receive-list-detail {
             display: flex;
 
-            .call-list-contats {
-                margin-left: 8px;
 
-                .contact-heading {
+            .receive-list-contats {
+                margin-left: 9px;
+
+                .receive-contact-heading {
                     font-size: 7px;
                     font-weight: 500;
                     color: $darkblack;
                     line-height: 11px;
                     text-align: center;
                 }
-        
-                .contact-para {
+
+                .receive-contact-para {
                     font-size: 6px;
                     font-weight: 400;
                 }
@@ -135,15 +147,17 @@
             height: 8px;
         }
     }
-}
 
-.bottom-phone-1 {
-    width: 59px;
-    height: 59px;
-    background-color: $skyblue;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    margin-top: 7px;
-    cursor: pointer;
+    .receive-bottom-input {
+        position: absolute;
+        bottom: 0;
+        .receive-input {
+            width: 100%;
+            padding: 6px;
+            border-radius: 30px;
+            background-color: $aliceblue;
+            border: none;
+            outline: none;
+        }
+    }
 }
