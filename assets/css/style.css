@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700&display=swap");
+.parent-container {
+  position: fixed;
+  bottom: 74px;
+  left: 14px;
+}
+
 .incoming-container {
   display: flex;
   display: none;
@@ -6,11 +13,11 @@
 .call-container {
   background-image: url(../images/Patterns.png);
   background-color: #2B368E;
-  width: 156px;
-  height: 277px;
+  width: 250px;
+  height: 400px;
   border-radius: 15px;
   background-repeat: no-repeat;
-  padding: 45px 25px 39px 24px;
+  padding: 45px 25px 39px 25px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .call-container .circle {
@@ -26,15 +33,20 @@
   text-align: center;
 }
 .call-container .call-text .call-heading {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  margin: 6px 0 6px 0;
+  margin: 16px 0 0 0;
 }
-.call-container .call-text .call-para {
-  font-size: 12px;
+.call-container .call-text .incoming-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.call-container .call-text .incoming-content .call-para {
+  font-size: 15px;
   font-weight: 400;
 }
-.call-container .call-text .call-para .i-icon {
+.call-container .call-text .incoming-content .i-icon {
   width: 10px;
   height: 10px;
   margin-left: 8px;
@@ -44,20 +56,26 @@
   justify-content: space-between;
   margin-top: 44px;
 }
+.call-container .call-meeting > div {
+  cursor: pointer;
+}
 .call-container .call-meeting .phone-logo {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #ffffff;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
+.call-container .call-meeting .phone-logo:hover {
+  background-color: #ffffff;
+}
 
 .call-list-container {
   background-image: url(../images/Patterns.png);
   background-color: #2B368E;
-  width: 156px;
-  height: 277px;
+  width: 250px;
+  height: 400px;
   border-radius: 15px;
   background-repeat: no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -65,67 +83,228 @@
 }
 .call-list-container .incoming-tab {
   background-color: #ffffff;
-  width: 73px;
-  height: 21px;
+  width: 50%;
+  height: 30px;
   border-radius: 15px 15px 0 0;
   margin: 0 auto;
 }
 .call-list-container .incoming-tab .incomig-heading {
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   padding-top: 7px;
 }
 .call-list-container .call-list {
   background-color: #ffffff;
-  width: 133px;
-  height: 234px;
+  width: 225px;
+  height: 350px;
   border-radius: 15px;
   margin: 0 auto;
-  padding: 13px 9px 42px 9px;
+  padding-top: 20px;
 }
 .call-list-container .call-list > div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7px;
+  cursor: pointer;
+}
+.call-list-container .call-list > div:hover {
+  background: rgba(255, 182, 0, 0.2);
 }
 .call-list-container .call-list .call-list-circle {
   background-color: #D9D9D9;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
 }
 .call-list-container .call-list .call-list-detail {
   display: flex;
 }
 .call-list-container .call-list .call-list-detail .call-list-contats {
-  margin-left: 8px;
+  margin-left: 9px;
 }
 .call-list-container .call-list .call-list-detail .call-list-contats .contact-heading {
-  font-size: 7px;
+  font-size: 14px;
   font-weight: 500;
   color: #202020;
-  line-height: 11px;
-  text-align: center;
+  line-height: 11.63px;
+  text-align: end;
 }
 .call-list-container .call-list .call-list-detail .call-list-contats .contact-para {
-  font-size: 6px;
+  font-size: 12px;
   font-weight: 400;
 }
-.call-list-container .call-list-dott .call-dott-img {
-  width: 8px;
-  height: 8px;
+.call-list-container .call-dott-img i {
+  color: #948989;
+  font-size: 14px;
 }
 
-.bottom-phone-1 {
+.call-flows {
+  position: fixed;
+  bottom: 9px;
+  display: flex;
+  align-items: center;
+}
+.call-flows .bottom-phone-1 {
   width: 59px;
   height: 59px;
-  background-color: #51B8D9;
+  background-color: #2B368E;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-top: 7px;
   cursor: pointer;
+  margin-right: 100px;
+  position: absolute;
+}
+.call-flows .show-incming-flow-btn {
+  background-color: #2B368E;
+  color: #ffffff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.call-pad {
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  background-color: #2B368E;
+  border-radius: 15px;
+  padding: 7px 14px 7px 14px;
+  border: 1px solid #FFB600;
+  height: 260px;
+  transition: 0.5s;
+  transform: translateY(1000px);
+}
+.call-pad.js-call {
+  transform: translateY(0);
+}
+.call-pad.dialing-flow {
+  left: 0;
+  transform: translateY(0);
+}
+.call-pad .call-pad-text {
+  position: relative;
+  margin-top: 12px;
+}
+.call-pad .call-pad-text .call-pad-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 4px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+.call-pad .call-pad-text .callpad-input-arrow {
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-40%);
+  cursor: pointer;
+}
+.call-pad .callpad-tablet {
+  margin-top: 10px;
+}
+.call-pad .callpad-tablet button {
+  color: #ffffff;
+  background-color: unset;
+  border: 0;
+  position: relative;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  background: #FFB600;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+}
+.call-pad .callpad-tablet button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+.call-pad .callpad-tablet button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.call-pad .callpad-tablet button:active {
+  top: 1px;
+}
+.call-pad .callpad-tablet .callpad-meeting-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.call-pad .callpad-tablet .callpad-meeting-1 .callpad-numbers {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  line-height: 16px;
+}
+.call-pad .callpad-tablet .callpad-meeting-1 .callpad-star {
+  cursor: pointer;
+}
+.call-pad .callpad-tablet .callpad-meeting-1 .callpad-star .callpad-star-text {
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 600;
+}
+.call-pad .callpad-tablet .callpad-attend {
+  width: 40px;
+  height: 40px;
+  background-color: #EDF9FF;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 15px auto;
+  cursor: pointer;
+}
+.call-pad .callpad-tablet .callpad-attend img {
+  cursor: pointer;
+}
+
+#transfering-call {
+  display: none;
+}
+
+#dial-list {
+  display: none;
+}
+
+#ringing-call-dial {
+  display: none;
+}
+
+.show-incoming {
+  margin-left: 300px;
 }
 
 .calling-main-container {
@@ -135,12 +314,34 @@
 .calling-container {
   background-image: url(../images/Patterns.png), url(../images/Patterns-2.png);
   background-color: #2B368E;
-  width: 156px;
-  height: 277px;
+  width: 250px;
+  height: 400px;
+  min-width: 250px;
+  min-height: 400px;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-position: left top, bottom right;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  padding: 26px 22px 8px 22px;
+  position: relative;
+  z-index: 99;
+}
+.calling-container.resizable {
+  position: relative;
+}
+.calling-container .resizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: e-resize;
+  width: 10px;
+  height: 10px;
+}
+.calling-container .rining-animation {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
 }
 .calling-container .circle {
   display: grid;
@@ -148,32 +349,71 @@
   width: 66px;
   height: 66px;
   background-color: #202020;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 50%;
-  margin-top: 26px;
+}
+.calling-container .animation-inner-cicle {
+  border: 2px solid #ffffff;
+  animation: scale 1.5s linear infinite;
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  top: 0;
+  border-radius: 50%;
+  animation-delay: 0.3s;
+  left: 17%;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.5);
+    border: 2px solid rgba(255, 255, 255, 0);
+  }
+}
+.calling-container .animation-cicle {
+  border: 2px solid #ffffff;
+  animation: scaling 1.5s linear infinite;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -2px;
+  border-radius: 50%;
+  animation-delay: 0;
+  left: 16%;
+}
+@keyframes scaling {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.8);
+    border: 2px solid rgba(255, 255, 255, 0);
+  }
 }
 .calling-container .call-text {
   color: #ffffff;
   text-align: center;
+  margin-bottom: 14px;
 }
 .calling-container .call-text .call-heading {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  margin: 7px 0 6px 0;
+  margin: 35px 0 0 0;
 }
 .calling-container .call-text .call-para {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
 }
 .calling-container .call-meeting {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 14px 22px 0 20px;
 }
 .calling-container .call-meeting .phone-logo {
-  width: 26px;
-  height: 26px;
+  width: 35px;
+  height: 35px;
   border: 1px solid #ffffff;
   border-radius: 50%;
   display: grid;
@@ -195,12 +435,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 8px 22px 14px 20px;
+  margin-top: 12px;
+  margin-bottom: 14px;
 }
 .calling-container .call-meeting-2 .phone-logo {
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 35px;
+  height: 35px;
   border: 1px solid #ffffff;
   background-color: #264A6D;
   border-radius: 50%;
@@ -229,1012 +470,167 @@
   backdrop-filter: blur(40px);
 }
 .calling-container .bottom-phone {
-  width: 35px;
-  height: 35px;
+  width: 42px;
+  height: 42px;
   border: 1px solid #ffffff;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-left: 20px;
+  margin: 25px auto;
 }
 
-.contact-container {
+.verticle-line {
   display: flex;
 }
-.contact-container .tabs-container {
+
+.hold-call {
+  display: none;
+}
+
+.tabs-container {
   display: flex;
 }
-.contact-container .tabs-container .recent-tab {
+.tabs-container > div {
+  cursor: pointer;
+}
+.tabs-container .recent-tab {
   background-color: #ffffff;
   border-radius: 15px 15px 0 0;
-  width: 73px;
-  height: 21px;
+  width: 50%;
+  height: 30px;
 }
-.contact-container .tabs-container .recent-tab .recent-heading {
-  font-size: 8px;
+.tabs-container .recent-tab .recent-heading {
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
   padding-top: 7px;
 }
-.contact-container .tabs-container .contact-tab {
+.tabs-container .contact-tab {
   width: 73px;
   height: 21px;
 }
-.contact-container .tabs-container .contact-tab .contact-main-heading {
-  font-size: 8px;
+.tabs-container .contact-tab .contact-main-heading {
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
-  padding-top: 7px;
+  padding-top: 5px;
   color: #ffffff;
 }
-.contact-container .call-list-1 {
+
+.call-list-1 {
   background-color: #ffffff;
-  width: 133px;
-  height: 234px;
+  width: 227px;
+  height: 347px;
   border-radius: 0 15px 15px 15px;
   margin: 0 auto;
-  padding: 10px 9px 0 9px;
+  padding-top: 10px;
 }
-.contact-container .call-list-1 .search-bar .search {
+.call-list-1 > div:not(:last-child) {
+  cursor: pointer;
+}
+.call-list-1 > div:not(:last-child):hover {
+  background: rgba(255, 182, 0, 0.2);
+}
+.call-list-1 .call-direction {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2B368E;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px auto;
+  cursor: pointer;
+}
+.call-list-1 .call-direction:hover {
+  background: #2B368E !important;
+}
+.call-list-1 > div:not(.call-pad) {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 9px;
+}
+.call-list-1 .search-bar {
+  margin-bottom: 15px;
+}
+.call-list-1 .search-bar:hover {
+  background-color: unset !important;
+}
+.call-list-1 .search-bar .search {
   width: 100%;
   background: rgba(43, 54, 142, 0.24);
   border-radius: 30px;
   border: none;
   outline: none;
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 500;
   padding: 4px 0 4px 13px;
 }
-.contact-container .call-list-1 .search-bar ::placeholder {
+.call-list-1 .search-bar ::placeholder {
   color: #646566;
 }
-.contact-container .call-list-1 > div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-}
-.contact-container .call-list-1 .call-list-circle {
+.call-list-1 .call-list-circle {
   background-color: #D9D9D9;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
 }
-.contact-container .call-list-1 .call-list-detail {
+.call-list-1 .call-list-detail {
   display: flex;
+  align-items: center;
 }
-.contact-container .call-list-1 .call-list-detail .call-list-contats {
-  margin-left: 8px;
+.call-list-1 .call-list-detail .call-list-contats {
+  margin-left: 9px;
 }
-.contact-container .call-list-1 .call-list-detail .call-list-contats .contact-heading {
-  font-size: 7px;
+.call-list-1 .call-list-detail .call-list-contats .contact-heading {
+  font-size: 14px;
   font-weight: 500;
   color: #202020;
-  line-height: 11px;
+  line-height: 11.63px;
   text-align: end;
 }
-.contact-container .call-list-1 .call-list-detail .call-list-contats .contact-para {
-  font-size: 6px;
-  font-weight: 400;
-}
-.contact-container .call-list-1 .call-direction {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: #2B368E;
-  border: 1px solid #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 13px auto;
-}
-.contact-container .call-list-dott .call-dott-img {
-  width: 8px;
-  height: 8px;
-}
-
-.transfer-container {
-  display: flex;
-}
-
-.calling-main-container {
-  display: flex;
-}
-
-.calling-container {
-  background-image: url(../images/Patterns.png), url(../images/Patterns-2.png);
-  background-color: #2B368E;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  background-repeat: no-repeat;
-  background-position: left top, bottom right;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.calling-container .circle {
-  display: grid;
-  place-items: center;
-  width: 66px;
-  height: 66px;
-  background-color: #202020;
-  margin: 0 auto;
-  border-radius: 50%;
-  margin-top: 26px;
-}
-.calling-container .call-text {
-  color: #ffffff;
-  text-align: center;
-}
-.calling-container .call-text .call-heading {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 7px 0 6px 0;
-}
-.calling-container .call-text .call-para {
+.call-list-1 .call-list-detail .call-list-contats .contact-para {
   font-size: 12px;
   font-weight: 400;
 }
-.calling-container .call-meeting {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 14px 22px 0 20px;
-}
-.calling-container .call-meeting .phone-logo {
-  width: 26px;
-  height: 26px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-.calling-container .call-meeting .call-1 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.calling-container .call-meeting .call-3 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.calling-container .call-meeting .phone-logo:hover {
-  background-color: #FFB600;
-}
-.calling-container .call-meeting-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 8px 22px 14px 20px;
-}
-.calling-container .call-meeting-2 .phone-logo {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  border: 1px solid #ffffff;
-  background-color: #264A6D;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-.calling-container .call-meeting-2 .phone-logo .muted-img {
-  display: none;
-  align-items: center;
+
+#call-list {
+  transform: translate(-500px);
   position: absolute;
-}
-.calling-container .call-meeting-2 .phone-logo:hover {
-  background-color: #FFB600;
-}
-.calling-container .call-meeting-2 .call-1 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.calling-container .call-meeting-2 .call-5 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.calling-container .call-meeting-2 .call-6 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.calling-container .bottom-phone {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin-left: 20px;
+  left: 250px;
+  bottom: 0;
+  transition: 0.8s;
 }
 
-.call-list-container {
-  position: relative;
-}
-.call-list-container .phone-pad {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 156px;
-  background-color: #2B368E;
+.check-js {
+  background-image: url(../images/select-phone-num.png);
   border: 1px solid #FFB600;
-  border-radius: 15px;
-  padding: 14px 0 14px 0;
-}
-.call-list-container .phone-pad .phone-text {
-  padding: 0 22px 0px 22px;
-  position: relative;
-}
-.call-list-container .phone-pad .phone-text .phone-call-text {
-  width: 100%;
-  border: none;
-  outline: none;
-}
-.call-list-container .phone-pad .phone-text .input-arrow {
-  position: absolute;
-  right: 30px;
-  top: 6px;
-  cursor: pointer;
-}
-.call-list-container .phone-tablet {
-  padding: 12px 25px 0 25px;
-}
-.call-list-container .phone-tablet .phone-meeting-1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.call-list-container .phone-tablet .phone-meeting-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.call-list-container .phone-tablet .phone-meeting-3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.call-list-container .phone-tablet .phone-meeting-4 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.call-list-container .phone-tablet .phone-meeting-4 .phone-star {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
-  line-height: 33px;
-}
-.call-list-container .phone-tablet .phone-logo {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 5px auto;
-}
-
-.receive-container {
-  display: flex;
-}
-
-.receive-call-container {
-  background-image: url(../images/receive-bg.png);
-  background-color: #00A7F4;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
   background-repeat: no-repeat;
-  padding: 45px 25px 39px 24px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.receive-call-container .receive-circle {
-  margin-top: 45px;
-  width: 66px;
-  height: 66px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.receive-call-container .receive-call-text {
-  color: #ffffff;
-  text-align: center;
-}
-.receive-call-container .receive-call-text .receive-call-heading {
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 14px;
-  line-height: 21px;
-}
-.receive-call-container .receive-call-text .receive-call-para {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.receive-call-container .receive-call-text .receive-call-para .i-icon {
-  width: 10px;
-  height: 10px;
-  margin-left: 3px;
-}
-.receive-call-container .receive-call-meeting {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 47px;
-}
-.receive-call-container .receive-call-meeting .receive-phone-logo {
-  width: 35px;
-  height: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.receive-call-list-container {
-  position: relative;
-  background-color: #ffffff;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.receive-call-list-container .receive-incoming-tab {
-  background-color: #ffffff;
-  width: 73px;
-  height: 21px;
-  border-radius: 15px 15px 0 0;
-  margin: 0 auto;
-}
-.receive-call-list-container .receive-incoming-tab .receive-incomig-heading {
-  position: relative;
-  font-size: 6px;
-  font-weight: 500;
-  text-align: center;
-  padding-top: 10px;
-  color: #00A7F4;
-}
-.receive-call-list-container .receive-incoming-tab .receive-incomig-heading::after {
-  position: absolute;
-  content: "";
-  width: 33px;
-  height: 2px;
-  top: 18px;
-  left: 19px;
-  background-color: #00A7F4;
-}
-.receive-call-list-container .receive-call-list {
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 10px 18px 0 18px;
-}
-.receive-call-list-container .receive-call-list .receive-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-}
-.receive-call-list-container .receive-call-list .receive-list-circle {
-  background-color: #D9D9D9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail {
-  display: flex;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats {
-  margin-left: 9px;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-heading {
-  font-size: 7px;
-  font-weight: 500;
-  color: #202020;
-  line-height: 11px;
-  text-align: center;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-para {
-  font-size: 6px;
-  font-weight: 400;
-}
-.receive-call-list-container .call-list-dott .call-dott-img {
-  width: 8px;
-  height: 8px;
-}
-.receive-call-list-container .receive-bottom-input {
-  position: absolute;
-  bottom: 0;
-}
-.receive-call-list-container .receive-bottom-input .receive-input {
-  width: 100%;
-  padding: 6px;
-  border-radius: 30px;
-  background-color: #EDF9FF;
-  border: none;
-  outline: none;
-}
-
-.callstatus-main-container {
-  display: flex;
-}
-
-.callstatus-container {
-  background-image: url(../images/receive-bg.png), url(../images/callstatus-bottom.png);
-  background-color: #00A7F4;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  background-repeat: no-repeat;
-  background-position: left top, bottom right;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 0 19px 0 19px;
-}
-.callstatus-container .callstatus-circle {
-  display: grid;
-  place-items: center;
-  width: 66px;
-  height: 66px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 50%;
-  margin-top: 34px;
-}
-.callstatus-container .call-text {
-  color: #ffffff;
-  text-align: center;
-}
-.callstatus-container .call-text .call-heading {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 7px 0 6px 0;
-}
-.callstatus-container .call-text .call-para {
-  font-size: 12px;
-  font-weight: 400;
-}
-.callstatus-container .call-meeting {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 11px 0 8px 0px;
-}
-.callstatus-container .call-meeting .phone-logo {
-  width: 26px;
-  height: 26px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-.callstatus-container .call-meeting .call-1 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.callstatus-container .call-meeting .call-3 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.callstatus-container .call-meeting .phone-logo:hover {
-  background-color: #FFB600;
-}
-.callstatus-container .call-meeting-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.callstatus-container .call-meeting-2 .phone-logo {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  border: 1px solid #ffffff;
-  background-color: #264A6D;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-.callstatus-container .call-meeting-2 .phone-logo .muted-img {
-  display: none;
-  align-items: center;
-  position: absolute;
-}
-.callstatus-container .call-meeting-2 .phone-logo:hover {
-  background-color: #FFB600;
-}
-.callstatus-container .call-meeting-2 .call-1 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.callstatus-container .call-meeting-2 .call-5 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.callstatus-container .call-meeting-2 .call-6 {
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(40px);
-}
-.callstatus-container .callstatus-bottom-phone {
-  width: 35px;
-  height: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 11px auto;
-}
-
-.receive-container {
-  display: flex;
-}
-
-.receive-call-container {
-  background-image: url(../images/receive-bg.png);
-  background-color: #00A7F4;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  background-repeat: no-repeat;
-  padding: 45px 25px 39px 24px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.receive-call-container .receive-circle {
-  margin-top: 45px;
-  width: 66px;
-  height: 66px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.receive-call-container .receive-call-text {
-  color: #ffffff;
-  text-align: center;
-}
-.receive-call-container .receive-call-text .receive-call-heading {
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 14px;
-  line-height: 21px;
-}
-.receive-call-container .receive-call-text .receive-call-para {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.receive-call-container .receive-call-text .receive-call-para .i-icon {
-  width: 10px;
-  height: 10px;
-  margin-left: 3px;
-}
-.receive-call-container .receive-call-meeting {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 47px;
-}
-.receive-call-container .receive-call-meeting .receive-phone-logo {
-  width: 35px;
-  height: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.receive-call-list-container {
-  position: relative;
-  background-color: #ffffff;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.receive-call-list-container .recent-tabs-container {
-  display: flex;
-  justify-content: center;
-}
-.receive-call-list-container .receive-recent-tab .receive-recent-heading {
-  position: relative;
-  font-size: 6px;
-  font-weight: 400;
-  text-align: center;
-  padding-top: 10px;
-  color: #00A7F4;
-}
-.receive-call-list-container .receive-recent-tab .receive-recent-heading::after {
-  position: absolute;
-  content: "";
-  width: 33px;
-  height: 2px;
-  top: 18px;
-  left: -6px;
-  background-color: #00A7F4;
-}
-.receive-call-list-container .receive-contact-tab {
-  margin-left: 10px;
-}
-.receive-call-list-container .receive-contact-tab .receive-contact-heading {
-  position: relative;
-  font-size: 6px;
-  font-weight: 500;
-  text-align: center;
-  padding-top: 10px;
-  color: #787E85;
-}
-.receive-call-list-container .receive-call-list {
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 10px 18px 0 18px;
-}
-.receive-call-list-container .receive-call-list .recent-search-bar {
-  margin-bottom: 8px;
-}
-.receive-call-list-container .receive-call-list .recent-search-bar .recent-search {
-  width: 100%;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  background-color: #EDF9FF;
-  font-size: 8px;
-  font-weight: 500;
-  padding: 4px 0 4px 15px;
-}
-.receive-call-list-container .receive-call-list .recent-search-bar ::placeholder {
-  color: #646566;
-}
-.receive-call-list-container .receive-call-list .receive-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-}
-.receive-call-list-container .receive-call-list .receive-list-circle {
-  background-color: #D9D9D9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail {
-  display: flex;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats {
-  margin-left: 9px;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-heading {
-  font-size: 7px;
-  font-weight: 500;
-  color: #202020;
-  line-height: 11px;
-  text-align: center;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-para {
-  font-size: 6px;
-  font-weight: 400;
-}
-.receive-call-list-container .call-list-dott .call-dott-img {
-  width: 8px;
-  height: 8px;
-}
-.receive-call-list-container .receive-bottom-input {
-  position: absolute;
-  bottom: 0;
-}
-.receive-call-list-container .receive-bottom-input .receive-input {
-  width: 100%;
-  padding: 6px;
-  border-radius: 30px;
-  background-color: #EDF9FF;
-  border: none;
-  outline: none;
-}
-.receive-call-list-container .conference-call {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background-color: #00A7F4;
-  display: grid;
-  place-items: center;
-  opacity: 1;
-  border-radius: 50%;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.call-pad {
-  background-image: url(../images/left-bottom-bg.png);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 156px;
-  background-color: #00A7F4;
-  border-radius: 15px;
-  padding: 7px 14px 7px 14px;
-}
-.call-pad .call-pad-text {
-  position: relative;
-}
-.call-pad .call-pad-text .call-pad-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  padding: 4px;
-  text-align: center;
-  font-size: 10px;
-  font-weight: 500;
-  background-color: #EDF9FF;
-  color: #646566;
-}
-.call-pad .call-pad-text .callpad-input-arrow {
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  cursor: pointer;
-}
-.call-pad .callpad-tablet {
-  margin-top: 10px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 .callpad-numbers {
-  width: 25px;
-  height: 25px;
-  background-color: #ffffff;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: #00A7F4;
-  line-height: 16px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 .callpad-star .callpad-star-text {
-  font-size: 16px;
-  line-height: 34px;
-  font-weight: 600;
-}
-.call-pad .callpad-tablet .callpad-attend {
-  width: 35px;
-  height: 35px;
-  background-color: #EDF9FF;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 0 auto;
-}
-
-.call-pad {
-  background-image: url(../images/left-bottom-bg.png);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 156px;
-  background-color: #00A7F4;
-  border-radius: 15px;
-  padding: 7px 14px 7px 14px;
-}
-.call-pad .call-pad-text {
-  position: relative;
-}
-.call-pad .call-pad-text .call-pad-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  padding: 4px;
-  text-align: center;
-  font-size: 10px;
-  font-weight: 500;
-  background-color: #EDF9FF;
-}
-.call-pad .call-pad-text .callpad-input-arrow {
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  cursor: pointer;
-}
-.call-pad .callpad-tablet {
-  margin-top: 10px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 .callpad-numbers {
-  width: 25px;
-  height: 25px;
-  background-color: #ffffff;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: #00A7F4;
-  line-height: 16px;
-}
-.call-pad .callpad-tablet .callpad-meeting-1 .callpad-star .callpad-star-text {
-  font-size: 16px;
-  line-height: 34px;
-  font-weight: 600;
-}
-.call-pad .callpad-tablet .callpad-attend {
-  width: 35px;
-  height: 35px;
-  background-color: #EDF9FF;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 0 auto;
-}
-
-.receive-container {
-  display: flex;
-}
-
-.receive-call-container {
-  background-image: url(../images/receive-bg.png);
-  background-color: #00A7F4;
-  position: relative;
-  width: 156px;
-  height: 277px;
-  border-radius: 15px;
-  background-repeat: no-repeat;
-  padding: 45px 25px 39px 24px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.receive-call-container .coming-call-1 {
-  position: absolute;
-  top: 90px;
-  left: 35px;
-  background-image: url(../images/coming-1.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  display: grid;
-  place-items: center;
   background-position: center;
 }
-.receive-call-container .receive-circle {
-  margin-top: 45px;
-  width: 66px;
-  height: 66px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.receive-call-container .receive-call-text {
-  color: #ffffff;
-  text-align: center;
-}
-.receive-call-container .receive-call-text .receive-call-heading {
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 14px;
-  line-height: 21px;
-}
-.receive-call-container .receive-call-text .receive-call-para {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.receive-call-container .receive-call-text .receive-call-para .i-icon {
-  width: 10px;
-  height: 10px;
-  margin-left: 3px;
-}
-.receive-call-container .receive-call-meeting {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 47px;
-}
-.receive-call-container .receive-call-meeting .receive-phone-logo {
-  width: 35px;
-  height: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+
+#transfering-call {
+  display: none;
 }
 
-.receive-call-list-container {
+.caliing-animation {
+  width: 550px;
   position: relative;
-  background-color: #ffffff;
-  width: 156px;
-  height: 277px;
+  overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.receive-call-list-container .receive-incoming-tab {
-  background-color: #ffffff;
-  width: 73px;
-  height: 21px;
-  border-radius: 15px 15px 0 0;
-  margin: 0 auto;
-}
-.receive-call-list-container .receive-incoming-tab .receive-incomig-heading {
-  position: relative;
-  font-size: 6px;
-  font-weight: 500;
-  text-align: center;
-  padding-top: 10px;
-  color: #00A7F4;
-}
-.receive-call-list-container .receive-incoming-tab .receive-incomig-heading::after {
-  position: absolute;
-  content: "";
-  width: 33px;
-  height: 2px;
-  top: 18px;
-  left: 19px;
-  background-color: #00A7F4;
-}
-.receive-call-list-container .receive-call-list {
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 10px 18px 0 18px;
-}
-.receive-call-list-container .receive-call-list .receive-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-}
-.receive-call-list-container .receive-call-list .receive-list-circle {
-  background-color: #D9D9D9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail {
-  display: flex;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats {
-  margin-left: 9px;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-heading {
-  font-size: 7px;
-  font-weight: 500;
-  color: #202020;
-  line-height: 11px;
-  text-align: center;
-}
-.receive-call-list-container .receive-call-list .receive-list-detail .receive-list-contats .receive-contact-para {
-  font-size: 6px;
-  font-weight: 400;
-}
-.receive-call-list-container .call-list-dott .call-dott-img {
-  width: 8px;
-  height: 8px;
-}
-.receive-call-list-container .receive-bottom-input {
-  position: absolute;
-  bottom: 0;
-}
-.receive-call-list-container .receive-bottom-input .receive-input {
-  width: 100%;
-  padding: 6px;
-  border-radius: 30px;
-  background-color: #EDF9FF;
-  border: none;
-  outline: none;
+
+.transfering-call-content {
+  display: none;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Mukta Mahee", sans-serif;
 }
 *::after {
   box-sizing: border-box;
@@ -1245,19 +641,21 @@
 
 body {
   overflow-x: hidden;
+  font-family: "Mukta Mahee", sans-serif;
 }
 
 .phone-number-text {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 26px;
 }
 
 .callpad-text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 16px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

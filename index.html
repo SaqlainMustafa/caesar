@@ -9,29 +9,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="incoming-container" id="hide-incoming">
-        <div class="call-container">
-            <div class="circle"></div>
+    <div class="parent-container">
+
+        <div class="calling-container resizable" id="transfering-call-dial">
+            <div class="rining-animation">
+                <div class="circle circle-ring">
+                    <div class="verticle-line hold-call">
+                        <img src="./assets/images/hold-btn.png">
+                    </div>
+                </div>
+    
+                <div class="animation-cicle"></div>
+                <div class="animation-inner-cicle"></div>
+            </div>
             <div class="call-text">
-                <h4 class="call-heading">Ubaid Asim+2</h4>
-                <p class="call-para">Incoming <img class="i-icon" src="./assets/images/i-circle.png"></p>
+                <h4 class="call-heading">Ubaid Asim</h4>
+                <p class="call-para ">Ringing to Ali</p>
             </div>
             <div class="call-meeting">
-                <div class="call-cut phone-logo">
-                    <img class="phone-img" src="./assets/images/call-down.png">
+                <div class="call-1 phone-logo"id="transfer-call">
+                    <img class="phone-img" src="./assets/images/Vector-1.png">
                 </div>
-                <a href="./calling.html"><div class="call-attend phone-logo">
-                    <img class="phone-img" src="./assets/images/call-up.png">
-                </div></a>
+                <div class="call-1 phone-logo" id="hold-call">
+                    <img class="phone-img" src="./assets/images/vector-2.png">
+                </div>
+                <div class="call-3 phone-logo">
+                    <img class="phone-img" src="./assets/images/vector-3.png">
+                </div>
+            </div>
+
+            <div class="call-meeting-2">
+                <div class="call-1 phone-logo" id="my-call" onclick="mutedImg()">
+                    <img class="phone-img" id="mute" src="./assets/images/Vector-4.png">
+                    <img class="muted-img" id="unmute" src="./assets/images/muted.png">
+                </div>
+                <div class="call-5 phone-logo">
+                    <img class="phone-img" src="./assets/images/vector-5.png">
+                </div>
+                <div class="call-6 phone-logo" onclick="myPhone()">
+                    <img class="phone-img" src="./assets/images/vector-6.png">
+                </div>
+            </div>
+
+            <div class="bottom-phone">
+                <img src="./assets/images/call-down.png">
             </div>
         </div>
 
-        <div class="call-list-container">
-            <div class="incoming-tab">
-                <h4 class="incomig-heading">Incoming</h4>
+        <div class="call-list-container" id="dial-list">
+            <div class="tabs-container">
+                <div class="recent-tab">
+                    <h4 class="recent-heading">Recent</h4>
+                </div>
+                <div class="contact-tab">
+                    <h4 class="contact-main-heading">Contact</h4>
+                </div>
             </div>
-            <div class="call-list">
-
+            <div class="call-list-1">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search" class="search">
+                    </div>
                 <div>
                     <div class="call-list-detail">
                         <div class="call-list-circle"></div>
@@ -40,10 +77,8 @@
                             <p class="contact-para">+92 345 928374</p>
                         </div>
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
-                        </div>
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -55,10 +90,21 @@
                             <p class="contact-para">+92 345 928374</p>
                         </div>
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="call-list-detail">
+                        <div class="call-list-circle "></div>
+                        <div class="call-list-contats">
+                            <h4 class="contact-heading">Ahmed Shah</h4>
+                            <p class="contact-para">+92 345 928374</p>
                         </div>
+                    </div>
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -70,10 +116,8 @@
                             <p class="contact-para">+92 345 928374</p>
                         </div>
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
-                        </div>
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -85,10 +129,8 @@
                             <p class="contact-para">+92 345 928374</p>
                         </div>
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
-                        </div>
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -100,53 +142,414 @@
                             <p class="contact-para">+92 345 928374</p>
                         </div>
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
-                        </div>
+                    <div class="call-dott-img">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </div>
                 </div>
 
-                <div>
-                    <div class="call-list-detail">
-                        <div class="call-list-circle"></div>
-                        <div class="call-list-contats">
-                            <h4 class="contact-heading">Ahmed Shah</h4>
-                            <p class="contact-para">+92 345 928374</p>
-                        </div>
-                    </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
-                        </div>
-                    </div>
+                <div class="call-direction">
+                    <img src="./assets/images/select-call.png">
                 </div>
 
-                <div>
-                    <div class="call-list-detail">
-                        <div class="call-list-circle"></div>
-                        <div class="call-list-contats">
-                            <h4 class="contact-heading">Ahmed Shah</h4>
-                            <p class="contact-para">+92 345 928374</p>
-                        </div>
+                <div class="call-pad dialing-flow" id="dial-btn">
+                    <div class="call-pad-text">
+                        <input type="text" class="call-pad-input" id="dialed-numbers-calling">
+                        <img class="callpad-input-arrow" onclick="removeNumber()"src="./assets/images/Arrow-yellow.png">
                     </div>
-                    <div class="call-list-dott">
-                        <div class="call-dott-img">
-                            <img class="dott-img" src="./assets/images/dott-img.png">
+    
+                    <div class="callpad-tablet">
+                        <div class="callpad-meeting-1">
+                            <div class="phone-1 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('1')">1</button>
+                            </div>
+                            <div class="phone-2 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('2')">2</button>
+                            </div>
+                            <div class="phone-3 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('3')">3</button>
+                            </div>
+                        </div>
+    
+                        <div class="callpad-meeting-1">
+                            <div class="phone-1 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('4')">4</button>
+                            </div>
+                            <div class="phone-2 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('5')">5</button>
+                            </div>
+                            <div class="phone-3 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('6')">6</button>
+                            </div>
+                        </div>
+    
+                        <div class="callpad-meeting-1">
+                            <div class="phone-1 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('7')">7</button>
+                            </div>
+                            <div class="phone-2 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('8')">8</button>
+                            </div>
+                            <div class="phone-3 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('9')">9</button>
+                            </div>
+                        </div>
+    
+                        <div class="callpad-meeting-1">
+                            <div class="phone-1 callpad-numbers callpad-star">
+                                <button class="callpad-star-text" onclick="getNumber('*')">*</button>
+                            </div>
+                            <div class="phone-2 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('0')">0</button>
+                            </div>
+                            <div class="phone-3 callpad-numbers">
+                                <button class="callpad-text" onclick="getNumber('#')">#</button>
+                            </div>
+                        </div>
+                        <div class="callpad-attend phone-logo" id="dialpad-dial" >
+                            <img class="phone-img" src="./assets/images/dialpad-dail.png">
                         </div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+        <div class="caliing-animation">
+            <div class="calling-container" id="calling-container">
+                <div class="circle">
+                    <div class="verticle-line hold-call">
+                        <img src="./assets/images/hold-btn.png">
+                    </div>
+                </div>
+                <div class="call-text">
+                    <h4 class="call-heading">Ubaid Asim</h4>
+                    <p class="call-para call-time">00:00:12</p>
+                    <p class="call-para transfering-call-content">Transfering to Ali</p>
+                </div>
+                <div class="call-meeting">
+                    <div class="call-1 phone-logo"id="transfer-call">
+                        <img class="phone-img" src="./assets/images/Vector-1.png">
+                    </div>
+                    <div class="call-1 phone-logo" id="hold-call">
+                        <img class="phone-img" src="./assets/images/vector-2.png">
+                    </div>
+                    <div class="call-3 phone-logo">
+                        <img class="phone-img" src="./assets/images/vector-3.png">
+                    </div>
+                </div>
+    
+                <div class="call-meeting-2">
+                    <div class="call-1 phone-logo" id="my-call" onclick="mutedIncomingImg()">
+                        <img class="phone-img" id="hide1" src="./assets/images/Vector-4.png">
+                        <img class="muted-img" id="hide2" src="./assets/images/muted.png">
+                    </div>
+                    <div class="call-5 phone-logo">
+                        <img class="phone-img" src="./assets/images/vector-5.png">
+                    </div>
+                    <div class="call-6 phone-logo" onclick="myPhone()">
+                        <img class="phone-img" src="./assets/images/vector-6.png">
+                    </div>
+                </div>
+    
+                <div class="bottom-phone">
+                    <img src="./assets/images/call-down.png">
+                </div>
+            </div>
+            <div class="call-list-container" id="call-list">
+                <div class="tabs-container">
+                    <div class="recent-tab">
+                        <h4 class="recent-heading">Recent</h4>
+                    </div>
+                    <div class="contact-tab">
+                        <h4 class="contact-main-heading">Contact</h4>
+                    </div>
+                </div>
+                <div class="call-list-1">
+            
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search" class="search">
+                        </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle "></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div class="call-direction" id="call-direction">
+                        <img src="./assets/images/select-call.png">
+                    </div>
+
+                    <div class="call-pad" id="my-phone">
+                        <div class="call-pad-text">
+                            <input type="text" class="call-pad-input" id="dialed-numbers">
+                            <img class="callpad-input-arrow" onclick="removeNumberRIning()"src="./assets/images/Arrow-yellow.png">
+                        </div>
+        
+                        <div class="callpad-tablet">
+                            <div class="callpad-meeting-1">
+                                <div class="phone-1 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('1')">1</button>
+                                </div>
+                                <div class="phone-2 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('2')">2</button>
+                                </div>
+                                <div class="phone-3 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('3')">3</button>
+                                </div>
+                            </div>
+        
+                            <div class="callpad-meeting-1">
+                                <div class="phone-1 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('4')">4</button>
+                                </div>
+                                <div class="phone-2 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('5')">5</button>
+                                </div>
+                                <div class="phone-3 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('6')">6</button>
+                                </div>
+                            </div>
+        
+                            <div class="callpad-meeting-1">
+                                <div class="phone-1 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('7')">7</button>
+                                </div>
+                                <div class="phone-2 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('8')">8</button>
+                                </div>
+                                <div class="phone-3 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('9')">9</button>
+                                </div>
+                            </div>
+        
+                            <div class="callpad-meeting-1">
+                                <div class="phone-1 callpad-numbers callpad-star">
+                                    <button class="callpad-star-text" onclick="getNumberRIning('*')">*</button>
+                                </div>
+                                <div class="phone-2 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('0')">0</button>
+                                </div>
+                                <div class="phone-3 callpad-numbers">
+                                    <button class="callpad-text" onclick="getNumberRIning('#')">#</button>
+                                </div>
+                            </div>
+                            <div class="callpad-attend phone-logo" id="callpad-attend">
+                                <img class="phone-img" src="./assets/images/dialpad-dail.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="incoming-container" id="hide-incoming">
+            <div class="call-container">
+                <div class="circle"></div>
+                <div class="call-text">
+                    <h4 class="call-heading">Ubaid Asim+2</h4>
+                    <div class="incoming-content">
+                        <p class="call-para">Incoming</p>
+                        <img class="i-icon" src="./assets/images/i-circle.png">
+                    </div>
+                    
+                </div>
+                <div class="call-meeting">
+                    <div class="call-attend phone-logo" id="call-attend">
+                        <img class="phone-img" src="./assets/images/call-up.png">
+                    </div>
+                    <div class="call-cut phone-logo">
+                        <img class="phone-img" src="./assets/images/call-down.png">
+                    </div>
+                </div>
+            </div>
+            <div class="call-list-container">
+                <div class="incoming-tab">
+                    <h4 class="incomig-heading">Incoming</h4>
+                </div>
+                <div class="call-list-1 call-list">
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="call-list-detail">
+                            <div class="call-list-circle"></div>
+                            <div class="call-list-contats">
+                                <h4 class="contact-heading">Ahmed Shah</h4>
+                                <p class="contact-para">+92 345 928374</p>
+                            </div>
+                        </div>
+                        <div class="call-dott-img">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="bottom-phone-1" onclick="bottomPhone()">
-        <img src="./assets/images/bottom-phone-icon.png">
+    <div class="call-flows">
+        <div class="bottom-phone-1" id="bottom-phone-1">
+            <img id="mydivheader" src="./assets/images/bottom-phone-icon.png">
+        </div>
+
+        <div class="show-incoming">
+            <button class="show-incming-flow-btn">Show Incoming Flow</button>
+        </div>
     </div>
 
     
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

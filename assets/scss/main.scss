@@ -1,15 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700&display=swap');
 @import  "variables";
 @import "incoming";
 @import "calling";
-@import "contact";
-@import "transfer";
-@import "muted";
-@import "call";
-@import "receiving";
-@import "callstatus";
-@import "recent";
-@import "callpad";
-@import "coming";
 
 
 
@@ -17,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Mukta Mahee', sans-serif;
 
     &::after {
         box-sizing: border-box;
@@ -30,17 +22,19 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'Mukta Mahee', sans-serif;
 }
 
 .phone-number-text {
     color: $white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     line-height: 26px;
 }
 
 .callpad-text {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 16px;
+    cursor: pointer;
 }

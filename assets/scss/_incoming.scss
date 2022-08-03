@@ -1,3 +1,9 @@
+.parent-container {
+    position: fixed;
+    bottom: 74px;
+    left: 14px;
+}
+
 .incoming-container {
     display: flex;
     display: none;
@@ -6,11 +12,11 @@
 .call-container {
     background-image: url(../images/Patterns.png);
     background-color: $blue;
-    width: 156px;
-    height: 277px;
+    width: 250px;
+    height: 400px;
     border-radius: 15px;
     background-repeat: no-repeat;
-    padding: 45px 25px 39px 24px;
+    padding: 45px 25px 39px 25px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     .circle {
@@ -27,15 +33,21 @@
         text-align: center;
     
         .call-heading {
-            font-size: 14px;
-            font-weight: 500;
-            margin: 6px 0 6px 0;
+            font-size: 16px;
+            font-weight: $font500;
+            margin: 16px 0 0 0;
         }
-    
-        .call-para {
-            font-size: 12px;
-            font-weight: 400;
-    
+
+        .incoming-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .call-para {
+                font-size: 15px;
+                font-weight: $font400;
+            }
+
             .i-icon {
                 width: 10px;
                 height: 10px;
@@ -48,14 +60,23 @@
         display: flex;
         justify-content: space-between;
         margin-top: 44px;
+
+        > div {
+            cursor: pointer;
+        }
+        
     
         .phone-logo {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border: 1px solid $white;
             border-radius: 50%;
             display: grid;
             place-items: center;
+
+            &:hover {
+                background-color: $white;
+            }
         }
     }
 }
@@ -63,8 +84,8 @@
 .call-list-container {
     background-image: url(../images/Patterns.png);
     background-color: $blue;
-    width: 156px;
-    height: 277px;
+    width: 250px;
+    height: 400px;
     border-radius: 15px;
     background-repeat: no-repeat;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -72,14 +93,14 @@
 
     .incoming-tab {
         background-color: $white;
-        width: 73px;
-        height: 21px;
+        width: 50%;
+        height: 30px;
         border-radius: 15px 15px 0 0;
         margin: 0 auto;
 
         .incomig-heading {
-            font-size: 8px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: $font600;
             text-align: center;
             padding-top: 7px;
         }
@@ -87,22 +108,26 @@
 
     .call-list {
         background-color: $white;
-        width: 133px;
-        height: 234px;
+        width: 225px;
+        height: 350px;
         border-radius: 15px;
         margin: 0 auto;
-        padding: 13px 9px 42px 9px;
+        padding-top: 20px;
 
         > div {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 7px;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 182, 0, 0.2);
+            }
         }
 
         .call-list-circle {
             background-color: $primary;
-            width: 20px;
-            height: 20px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
         }
 
@@ -110,40 +135,214 @@
             display: flex;
 
             .call-list-contats {
-                margin-left: 8px;
+                margin-left: 9px;
 
                 .contact-heading {
-                    font-size: 7px;
-                    font-weight: 500;
+                    font-size: 14px;
+                    font-weight: $font500;
                     color: $darkblack;
-                    line-height: 11px;
-                    text-align: center;
+                    line-height: 11.63px;
+                    text-align: end;
                 }
         
                 .contact-para {
-                    font-size: 6px;
-                    font-weight: 400;
+                    font-size: 12px;
+                    font-weight: $font400;
                 }
             }
         }
     }
 
-    .call-list-dott {
-        
-        .call-dott-img {
-            width: 8px;
-            height: 8px;
+    .call-dott-img {
+        i {
+            color: $darkgrey;
+            font-size: 14px;
         }
     }
 }
 
-.bottom-phone-1 {
-    width: 59px;
-    height: 59px;
-    background-color: $skyblue;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    margin-top: 7px;
-    cursor: pointer;
+.call-flows {
+    position: fixed;
+    bottom: 9px;
+    display: flex;
+    align-items: center;
+
+    .bottom-phone-1 {
+        width: 59px;
+        height: 59px;
+        background-color: $blue;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        margin-right: 100px;
+        position: absolute;
+    }
+
+    .show-incming-flow-btn {
+        background-color: $blue;
+        color: $white;
+        border: 0;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.call-pad {
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    background-color: $blue;
+    border-radius: 15px;
+    padding: 7px 14px 7px 14px;
+    border: 1px solid $yellow;
+    height: 260px;
+    transition: 0.5s;
+    transform: translateY(1000px);
+
+    &.js-call {
+        transform: translateY(0);
+    }
+
+    &.dialing-flow {
+        left: 0;
+        transform: translateY(0);
+    }
+
+    .call-pad-text {
+        position: relative;
+        margin-top: 12px;
+        
+        .call-pad-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 4px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: $font500;
+            background-color: $white;
+        }
+
+        .callpad-input-arrow {
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            transform: translateY(-40%);
+            cursor: pointer;
+        }
+    }
+
+    .callpad-tablet {
+        margin-top: 10px;
+
+        button {
+            color: $white;
+            background-color: unset;
+            border: 0;
+            position: relative;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor:pointer;
+            user-select:none;
+            text-align: center;
+            text-decoration: none;
+            background: $yellow;
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s; /* Safari */
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all 0.5s;
+                box-shadow: 0 0 10px 40px white;
+            }
+        }
+
+        button:active:after {
+            box-shadow: 0 0 0 0 white;
+            position: absolute;
+            border-radius: 50%;
+            left: 0;
+            top:0;
+            opacity: 1;
+            transition: 0s;
+        }
+
+        button:active {
+            top: 1px;
+        }
+
+        .callpad-meeting-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            .callpad-numbers {
+                width: 25px;
+                height: 25px;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                color: $white;
+                line-height: 16px;
+            }
+
+            .callpad-star {
+                cursor: pointer;
+
+                .callpad-star-text {
+                    font-size: 16px;
+                    line-height: 34px;
+                    font-weight: $font600;
+                }
+            }
+        }
+
+        .callpad-attend {
+            width: 40px;
+            height: 40px;
+            background-color: $aliceblue;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin: 15px auto;
+            cursor: pointer;
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#transfering-call {
+    display: none;
+}
+
+#dial-list {
+    display: none;
+}
+
+#ringing-call-dial {
+    display: none;
+}
+
+.show-incoming {
+    margin-left: 300px;
 }
